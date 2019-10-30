@@ -12,3 +12,6 @@ jobs:
       - run: 
          name: It is now 
          command: date   
+      - run: 
+         name: Node check 
+         command: node --version && npm --version
