@@ -1,0 +1,7 @@
+version: 2
+jobs: build
+  docker: 
+   - image: circleci/node:13.0.1-stretch-browsers
+  steps:
+   - checkout
+   - run: pwd && ls -al
