@@ -5,9 +5,7 @@ jobs:
       image: ubuntu-1604:201903-01
     steps: 
       - checkout
-      - run:
-         name: Check test stuff
-         command: ./test-test.sh
+      - run: echo "HELLO"
   build: 
     docker: 
       - image: circleci/node:13.0.1-stretch-browsers
