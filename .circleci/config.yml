@@ -34,11 +34,11 @@ jobs:
 workflows: 
   version: 2
   install-and-test:
-  jobs: 
-    - influx 
-    - build: 
-       requires:
-         - influx    
+    jobs: 
+      - influx 
+      - build: 
+         requires:
+           - influx    
 
 
   
