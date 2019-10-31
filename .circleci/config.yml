@@ -6,7 +6,8 @@ jobs:
     steps: 
       - checkout
       - run: echo "HELLO"
-  build: 
+  build:
+    requires: influx 
     docker: 
       - image: circleci/node:13.0.1-stretch-browsers
     steps: 
