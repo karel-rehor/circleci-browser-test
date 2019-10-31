@@ -24,6 +24,10 @@ jobs:
       - run: 
          name: Chrome check 
          command: google-chrome --version && which google-chrome && chromedriver --version && which chromedriver
+      - run:
+         name: Check test stuff
+         command: ./test-test.sh
+        
 
 
   
