@@ -13,3 +13,5 @@ npm install
 
 npm test -- features/onboarding/onboarding.feature
 
+npm run report:junit
+
