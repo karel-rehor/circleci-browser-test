@@ -31,12 +31,6 @@ jobs:
       - run: 
          name: Chrome check 
          command: google-chrome --version && which google-chrome && chromedriver --version && which chromedriver
-workflows: 
-  version: 2
-  install_and_test: 
-    jobs: 
-      - influx
-      - build
         
 
 
