@@ -29,6 +29,11 @@ jobs:
       - run: 
          name: Connect Check 
          command: ./test-run.sh
+      - run: 
+         name: Save Test Results
+         command: | 
+           mkdir -p ~/cucumber
+           cp selenim-accept-infl2/report/cucumber_junit.xml ~/cucumber/junit.xml 
       - store_test_results:
           path: selenium-accept-infl2/report
       - store_artifacts: 
