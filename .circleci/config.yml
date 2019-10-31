@@ -29,7 +29,7 @@ jobs:
       - run: 
          name: Connect Check 
          command: ./test-run.sh
-    
-
-
-  
+      - store_test_results:
+          path: selenium-accept-infl2/reports
+      - store_artifacts: 
+          path: selenium-accept-infl2/reports
