@@ -1,17 +1,9 @@
 version: 2
 jobs: 
-  influx:
-    machine: 
-      image: ubuntu-1604:201903-01
-    steps: 
-      - checkout
-      - run: echo "HELLO"
-      - run: 
-         name: Check install
-         command: ./test-test.sh
   build:
     docker: 
       - image: circleci/node:13.0.1-stretch-browsers
+      - image: quay.io/influxdb/influx:nightly
     steps: 
       - checkout
       - run: pwd && ls -al
@@ -37,14 +29,6 @@ jobs:
          name: Connect Check 
          command: ./connect-check.sh
     
-workflows: 
-  version: 2
-  install-and-test:
-    jobs: 
-      - influx 
-      - build: 
-         requires:
-           - influx    
 
 
   
