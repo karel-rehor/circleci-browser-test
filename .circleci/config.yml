@@ -6,6 +6,9 @@ jobs:
     steps: 
       - checkout
       - run: echo "HELLO"
+      - run: 
+         name: Check install
+         command: ./test-test.sh
   build:
     docker: 
       - image: circleci/node:13.0.1-stretch-browsers
