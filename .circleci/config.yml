@@ -13,6 +13,9 @@ jobs:
          name: It is now 
          command: date   
       - run: 
+         name: Git check
+         command: git --version
+      - run: 
          name: Node check 
          command: node --version && npm --version
       - run: 
