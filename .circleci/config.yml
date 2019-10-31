@@ -33,6 +33,9 @@ jobs:
       - run: 
          name: Chrome check 
          command: google-chrome --version && which google-chrome && chromedriver --version && which chromedriver
+      - run: 
+         name: Connect Check 
+         command: ./connect-check.sh
     
 workflows: 
   version: 2
