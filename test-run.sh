@@ -11,7 +11,7 @@ cd selenium-accept-infl2/
 
 npm install 
 
-npm test -- features/onboarding/onboarding.feature
+npm test 
 
 npm run report:junit
 npm run report:html
