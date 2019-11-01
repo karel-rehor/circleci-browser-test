@@ -20,5 +20,17 @@ echo TEST_RESULT = $TEST_RESULT
 npm run report:junit
 npm run report:html
 
+echo "Saving Test Results"
+
+mkdir -p ~/test-results/cucumber
+mkdir -p ~/test-results/html
+mkdir -p ~/test-results/macabre
+pwd
+cp ~/project/selenium-accept-infl2/report/cucumber_junit.xml ~/test-results/macabre/junit.xml
+cp ~/project/selenium-accept-infl2/report/cucumber_report.html ~/test-results/html/cucumber_report.html
+cp ~/project/selenium-accept-infl2/report/cucumber_report.json ~/test-results/cucumber
+cp -r ~/project/selenium-accept-infl2/screenshots ~/test-results
+
+
 exit $TEST_RESULT 
 
