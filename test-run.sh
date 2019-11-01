@@ -13,6 +13,12 @@ npm install
 
 npm test 
 
+TEST_RESULT=$?
+
+echo TEST_RESULT = $TEST_RESULT
+
 npm run report:junit
 npm run report:html
+
+exit $TEST_RESULT 
 
