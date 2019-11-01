@@ -28,7 +28,7 @@ jobs:
          command: google-chrome --version && which google-chrome && chromedriver --version && which chromedriver
       - run: 
          name: Selenium tests 
-         command: cd selenium-accept-infl2/ && npm test; npm run report:junit; npm run report:html 
+         command: git clone https://github.com/bonitoo-io/selenium-accept-infl2.git && cd selenium-accept-infl2/ && npm test; npm run report:junit; npm run report:html 
       - run: 
          name: Save Test Results
          command: | 
