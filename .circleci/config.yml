@@ -35,7 +35,7 @@ jobs:
            set +e 
            cd selenium-accept-infl2
            npm install
-           npm test -- features/loadData/telegrafs.feature && echo $? > exit.code
+           npm test -- features/loadData/telegrafs.feature;  echo $? > exit.code
            npm run report:junit
            npm run report:html 
            mkdir -p ~/test-results/cucumber
@@ -45,6 +45,7 @@ jobs:
            cp ~/project/selenium-accept-infl2/report/cucumber_junit.xml ~/test-results/cucumber/report.xml
            cp -r ~/project/selenium-accept-infl2/screenshots ~/test-results
            ls -al
+           cat exit.code
       - store_test_results:
           path: ~/test-results
       - store_artifacts: 
