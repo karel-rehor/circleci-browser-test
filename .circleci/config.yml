@@ -33,6 +33,9 @@ jobs:
          name: Selenium tests 
          command: cd selenium-accept-infl2 && npm install && npm test
       - run: 
+         name: Black box 
+         command: echo "BLACK BOX"
+      - run: 
          name: Save Test Results
          command: |
            cd selenium-accept-infl2 && npm report:html 
