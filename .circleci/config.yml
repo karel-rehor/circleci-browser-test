@@ -31,7 +31,10 @@ jobs:
          command: git clone https://github.com/bonitoo-io/selenium-accept-infl2.git 
       - run: 
          name: Selenium tests 
-         command: set +e && cd selenium-accept-infl2/scripts && ./circleci-run.sh
+         command: | 
+           set +e 
+           cd selenium-accept-infl2/scripts 
+           ./circleci-run.sh
       - run: 
          name: Black box 
          command: echo "BLACK BOX"
