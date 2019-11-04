@@ -33,8 +33,9 @@ jobs:
          name: Selenium tests 
          command: | 
            set +e 
-           cd selenium-accept-infl2/scripts 
-           ./circleci-run.sh
+           cd selenium-accept-infl2
+           npm install
+           npm test -- features/loadData/telegrafs.feature
       - run: 
          name: Black box 
          command: echo "BLACK BOX"
