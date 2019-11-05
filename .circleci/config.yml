@@ -36,6 +36,7 @@ jobs:
            cd selenium-accept-infl2
            npm install
            npm test;  TEST_RESULT=$?
+           sleep 30
            npm run report:html
            npm run report:junit 
            mkdir -p ~/test-results/cucumber
