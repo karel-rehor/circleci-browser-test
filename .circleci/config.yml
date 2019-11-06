@@ -7,13 +7,6 @@ jobs:
         command: [ --e2e-testing=true ]
     steps: 
       - checkout
-      - run: pwd && ls -al
-      - run: 
-         name: Greeting 
-         command: echo Hello 
-      - run: 
-         name: It is now 
-         command: date   
       - run: 
          name: Git check
          command: git --version
