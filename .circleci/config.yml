@@ -35,7 +35,7 @@ jobs:
            set +e 
            cd selenium-accept-infl2
            npm install
-           npm test -- features/loadData/telegrafs.feature; TEST_RESULT=$?
+           npm test; TEST_RESULT=$?
            sleep 30
            npm run report:html
            npm run report:junit 
