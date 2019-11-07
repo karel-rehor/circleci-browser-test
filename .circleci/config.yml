@@ -7,7 +7,7 @@ jobs:
          name: Simple Step
          command: | 
             echo "Jabberwocky"
-            exit 0
+            exit 1
   build:
     docker: 
       - image: circleci/node:13.0.1-stretch-browsers
