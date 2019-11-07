@@ -1,5 +1,13 @@
 version: 2
-jobs: 
+jobs:
+  jabberwock: 
+    machine: true
+    steps:
+      - run:
+         name: Simple Step
+         command: | 
+            echo "Jabberwocky"
+            exit 0
   build:
     docker: 
       - image: circleci/node:13.0.1-stretch-browsers
@@ -44,3 +52,13 @@ jobs:
           path: ~/test-results
       - store_artifacts: 
           path: ~/artefacts
+
+workflows:
+   version: 2
+   test: 
+     jobs: 
+      - jabberwock
+      - build:
+         requires: 
+           - jabberwock
+
